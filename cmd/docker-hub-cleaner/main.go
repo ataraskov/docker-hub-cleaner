@@ -77,12 +77,12 @@ func init() {
 	rootCmd.Flags().IntVar(&concurrency, "concurrency", 5, "Number of concurrent API requests")
 
 	// Mark required flags
-	rootCmd.MarkFlagRequired("repository")
+	_ = rootCmd.MarkFlagRequired("repository")
 
 	// Bind environment variables
-	viper.BindEnv("username", "DOCKER_HUB_USERNAME")
-	viper.BindEnv("password", "DOCKER_HUB_PASSWORD")
-	viper.BindEnv("token", "DOCKER_HUB_TOKEN")
+	_ = viper.BindEnv("username", "DOCKER_HUB_USERNAME")
+	_ = viper.BindEnv("password", "DOCKER_HUB_PASSWORD")
+	_ = viper.BindEnv("token", "DOCKER_HUB_TOKEN")
 }
 
 func run(cmd *cobra.Command, args []string) error {
