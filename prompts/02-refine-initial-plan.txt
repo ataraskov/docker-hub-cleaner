@@ -1,0 +1,4 @@
+Use `golang.org/x/mod/semver` library instead of `github.com/Masterminds/semver/v3`.
+Do not use `clean` sub-command, allow arguments for the "root" command (i.e: docker-hub-cleaner [flags]).
+Make `v` optional for semver sorting.
+Make sure to strip prefix from version if provided (for example, version can be set as `develop-1.2.3` and prefix is `^(bug|develop)`.

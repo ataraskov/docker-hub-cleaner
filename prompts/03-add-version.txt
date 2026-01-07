@@ -1,0 +1,1 @@
+Add version flag. Handle versions via git tags.

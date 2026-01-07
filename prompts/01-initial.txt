@@ -1,0 +1,7 @@
+Plan implementation of a CLI tool to manage docker hub images.
+It should be written in Golang.
+Below options should be available:
+* retention by days, i.e. keep images created no later than X days ago
+* retention by count, i.e. keep last X images (lexicographical or semver ordered)
+* filter by tag, i.e. dev-.* (with regexp support)
+* dryrun mode, i.e. report changes but not actually remove anything
