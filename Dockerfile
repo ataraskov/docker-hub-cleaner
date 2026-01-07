@@ -9,14 +9,13 @@ RUN go mod download && go mod verify
 
 COPY . .
 
+ARG TARGETOS
+ARG TARGETARCH
 ARG VERSION
 ARG GIT_COMMIT
 ARG BUILD_TIME
-RUN CGO_ENABLED=0 go build \
-    -ldflags="-w -s \
-    -X main.Version=${VERSION} \
-    -X main.GitCommit=${GIT_COMMIT} \
-    -X main.BuildTime=${BUILD_TIME}" \
+RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build \
+    -ldflags "-w -s -X main.Version=${VERSION} -X main.GitCommit=${GIT_COMMIT} -X main.BuildTime=${BUILD_TIME}" \
     -o /build/docker-hub-cleaner \
     ./cmd/docker-hub-cleaner
 
