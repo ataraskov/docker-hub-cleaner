@@ -1,0 +1,42 @@
+# Binaries and build artifacts
+bin/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+docker-hub-cleaner
+*.test
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Git and CI
+.git/
+.gitignore
+.github/
+
+# Documentation (except README)
+*.md
+!README.md
+
+# Test coverage
+coverage.out
+coverage.html
+
+# Vendor
+vendor/
+
+# Development files
+prompts/

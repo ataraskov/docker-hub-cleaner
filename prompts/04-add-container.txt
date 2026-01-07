@@ -1,0 +1,1 @@
+Add github workflow to build docker image with docker-hub-cleaner. Use github packages as image registry.
